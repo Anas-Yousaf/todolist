@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF8E8;
+}
+
+input[type='text'] {
+    outline: none;
+}
+
+header {
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-weight: bold;
+    color: #674636;
+}
+
+/* To Do Container */
+.todo-container {
+    width: 80vw; /* Adjust width for smaller screens */
+     max-width: 50vw; /*Half of the screen on larger displays  */
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F7EED3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2rem;
+    flex-wrap: wrap; /* Adjust layout for smaller screens */
+}
+
+.add-task input {
+    width: 80%;
+    height: 3rem;
+    border-radius: 2rem 0 0 2rem;
+    border: none;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.add-task button {
+    width: 20%;
+    height: 3rem;
+    border-radius: 0 2rem 2rem 0;
+    background-color: #AAB396;
+    color: #674636;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* Task div */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Make task take more width for better layout */
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+.text p {
+    text-wrap: wrap;
+    padding-inline: 10px;
+}
+
+input[type="radio"] {
+    appearance: none; /* Remove default radio button */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #AAB396;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #674636;
+    border-color: #674636;
+}
+
+.text p {
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.cross {
+    color: #E74C3C;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .todo-container {
+        max-width: 90vw;
+        padding: 15px;
+    }
+
+    .add-task {
+        flex-direction: column; /* Stack input and button on top of each other */
+        align-items: stretch;
+    }
+
+    .add-task input {
+        width: 100%;
+        border-radius: 2rem; /* Full rounded corners */
+        margin-bottom: 10px; /* Add space between input and button */
+    }
+
+    .add-task button {
+        width: 100%;
+        border-radius: 2rem; /* Full rounded corners */
+        font-size: 1.5em;
+    }
+
+    
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+   
+    .add-task input {
+        height: 2.5rem;
+        font-size: 0.9em;
+    }
+    
+    .add-task button {
+        height: 2.5rem;
+        font-size: 1.2em;
+    }
+
+    .task {
+        padding: 10px;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .cross {
+        font-size: 1.2em; /* Adjust size for smaller screens */
+    }
+}
